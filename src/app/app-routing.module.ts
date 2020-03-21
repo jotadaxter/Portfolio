@@ -6,10 +6,11 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 
 
 const routes: Routes = [
-  {path: '', component: AboutPageComponent },
+  {path: '',   redirectTo: '/about', pathMatch: 'full' },
   {path: 'about', component: AboutPageComponent},
   {path: 'projects', component: ProjectsPageComponent},
-  {path: 'contact', component: ContactPageComponent}
+  {path: 'contact', component: ContactPageComponent},
+  {path: '**',   redirectTo: '/about'},
 ];
 
 @NgModule({
