@@ -6,7 +6,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 
 
 const routes: Routes = [
-  {path: '',   redirectTo: '/about', pathMatch: 'full' },
+  {path: '', component: AboutPageComponent },
   {path: 'about', component: AboutPageComponent},
   {path: 'projects', component: ProjectsPageComponent},
   {path: 'contact', component: ContactPageComponent}
