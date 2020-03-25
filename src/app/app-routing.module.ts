@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'about', component: AboutPageComponent},
   {path: 'projects', component: ProjectsPageComponent},
   {path: 'contact', component: ContactPageComponent},
+  {path: 'contacts', component: ContactPageComponent},
   {path: '**',   redirectTo: '/about'},
 ];
 
