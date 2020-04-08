@@ -1,14 +1,17 @@
 
+
+
+
 <app-header></app-header>
 
+
+<app-navbar-mobile class=" d-lg-none"></app-navbar-mobile>
+
+
 <div class="container">
-  <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
+  <app-navbar class="d-none d-lg-block"></app-navbar>
+  <router-outlet ></router-outlet>
+  <app-footer class="d-none d-lg-block"></app-footer>
 </div>
 
-
-
-
-
-
+<app-footer class=" d-lg-none"></app-footer>
