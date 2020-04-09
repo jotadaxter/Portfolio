@@ -1,0 +1,16 @@
+.footer {
+  background: lightgrey;
+  color: darkgray;
+  /* position: absolute;
+  bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;*/
+  text-align: center;
+}
+
+.custom-icon {
+  margin: 0.5em;
+  position: relative;
+  display: inline-block;
+}
+/*# sourceMappingURL=footer.component.css.map */
