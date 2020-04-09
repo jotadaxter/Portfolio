@@ -1,0 +1,15 @@
+.project {
+  margin:2em;
+  background-color: #dad8d871;
+}
+
+.project:hover {
+  background-color: #b4b4b471;
+  cursor: pointer;
+}
+
+.project .img-responsive {
+  margin:1em;
+  width:50%;
+  float:left;
+}
