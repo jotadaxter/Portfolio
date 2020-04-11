@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/internal/Observable';
   styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent implements OnInit {
-  projects$: Observable<any> =  this.http.get('/api/projects');
+  projects$: Observable<any> =  this.http.get('https://my-json-server.typicode.com/jotadaxter/Portfolio/projects');
 
   constructor(private titleService: Title, private http: HttpClient) { }
 
