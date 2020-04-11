@@ -1,0 +1,19 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+import { HttpClient} from '@angular/common/http';
+import { Project } from 'src/app/utilities/datasets/project';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProjectsPageService {
+  serviceUrl: string;
+
+  constructor(private http: HttpClient) {
+    this.serviceUrl = 'https://my-json-server.typicode.com/jotadaxter/PortfolioDB/projects';
+  }
+
+  getProjects() {
+    return this.http.get<Observable<Project>>(this.serviceUrl);
+  }
+}
