@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Project } from 'src/app/utilities/datasets/project';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({

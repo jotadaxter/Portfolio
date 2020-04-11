@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { ProjectsPageService } from './projects-page.service';
-import { Project } from 'src/app/utilities/datasets/project';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-projects-page',
@@ -11,15 +11,20 @@ import { Project } from 'src/app/utilities/datasets/project';
   styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent implements OnInit {
-  projects: Observable<Project>;
+  projects: any;
 
   constructor(
     private titleService: Title,
-    private projectsPageService: ProjectsPageService) {}
+    private service: ProjectsPageService,
+    private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.projectsPageService.getProjects()
-    .subscribe(projects => this.projects = projects);
+
+    this.route.paramMap.subscribe(params => {
+      this.service.getProjects().subscribe(c => {
+        this.projects = c;
+      });
+    });
 
     this.setTitle('Portfolio JACMS - Projects');
   }

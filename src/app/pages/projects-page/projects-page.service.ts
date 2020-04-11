@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient} from '@angular/common/http';
-import { Project } from 'src/app/utilities/datasets/project';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +13,6 @@ export class ProjectsPageService {
   }
 
   getProjects() {
-    return this.http.get<Observable<Project>>(this.serviceUrl);
+    return this.http.get(this.serviceUrl);
   }
 }
