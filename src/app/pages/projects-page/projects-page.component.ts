@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-projects-page',
@@ -7,8 +9,9 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./projects-page.component.scss']
 })
 export class ProjectsPageComponent implements OnInit {
+  projects$: Observable<any> =  this.http.get('/api/projects');
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.setTitle('Portfolio JACMS - Projects');

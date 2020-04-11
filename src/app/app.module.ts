@@ -10,6 +10,7 @@ import { NavbarMobileComponent } from './utilities/navbar-mobile/navbar-mobile.c
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectPageComponent } from './pages/project-page/project-page.component'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProjectPageComponent } from './pages/project-page/project-page.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

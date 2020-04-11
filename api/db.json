@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Dungeon Explorer",
+      "description": "Dungeon Crawler Game inspired on Legend Of Zelda"
+    },
+    {
+      "id": "2",
+      "title": "FEUP Dungeon Explorer",
+      "description": "Dungeon Crawler Game inspired on Legend Of Zelda and located on the Faculty of Engineering of the University of Porto"
+    },
+    {
+      "id":3,
+      "title": "Elerehna",
+      "description": "3D shooter adventure game with puzzles and challenges"
+    }
+  ]
+}

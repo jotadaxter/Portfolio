@@ -1,40 +1,12 @@
 <h3 class="text-center">Projects</h3><br>
 
-<div class="container-fluid bg-3 text-center">
+<div class="container-fluid bg-3 text-center"
+  *ngFor="let project of projects$ | async">
   <div class="row project">
     <div class="col-sm-10 offset-md-1">
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" alt="Image">
-      <br><p>Project1</p>
-      <p>Description1</p>
-    </div>
-  </div>
-  <div class="row project">
-    <div class="col-sm-10 offset-md-1">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" alt="Image">
-      <br> <p>Project2</p>
-      <p>Description2</p>
-    </div>
-  </div>
-  <div class="row project">
-    <div class="col-sm-10 offset-md-1">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  alt="Image">
-      <br> <p>Project2</p>
-      <p>Description2</p>
-    </div>
-  </div>
-  <div class="row project">
-    <div class="col-sm-10 offset-md-1">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"  alt="Image">
-      <br>
-      <p>Project2</p>
-      <p>Description2</p>
-    </div>
-  </div>
-  <div class="row project">
-    <div class="col-sm-10 offset-md-1">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" alt="Image">
-      <p>Project2</p>
-      <p>Description2</p>
+      <br><p>{{project.title}}</p>
+      <p>{{project.description}}</p>
     </div>
   </div>
 </div>
