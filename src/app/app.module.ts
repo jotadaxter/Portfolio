@@ -11,6 +11,8 @@ import { NavbarMobileComponent } from './utilities/navbar-mobile/navbar-mobile.c
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectPageComponent } from './pages/project-page/project-page.component'
 import { HttpClientModule } from '@angular/common/http';
+import { ImageModalComponent } from './utilities/image-modal/image-modal.component';
+import { BreadcrumbComponent } from './utilities/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     NavbarMobileComponent,
     ProjectPageComponent,
+    ImageModalComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     BrowserModule,
