@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImageModalComponent } from './utilities/image-modal/image-modal.component';
 import { BreadcrumbComponent } from './utilities/breadcrumb/breadcrumb.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { BreadcrumbComponent } from './utilities/breadcrumb/breadcrumb.component
     NavbarMobileComponent,
     ProjectPageComponent,
     ImageModalComponent,
-    BreadcrumbComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
