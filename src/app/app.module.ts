@@ -9,7 +9,7 @@ import { FooterComponent } from './utilities/footer/footer.component';
 import { NavbarMobileComponent } from './utilities/navbar-mobile/navbar-mobile.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProjectPageComponent } from './pages/project-page/project-page.component'
+import { ProjectPageComponent } from './pages/project-page/project-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageModalComponent } from './utilities/image-modal/image-modal.component';
 
