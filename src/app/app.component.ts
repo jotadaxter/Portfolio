@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {enableProdMode} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Portfolio JACMS';
 }
+
+enableProdMode();

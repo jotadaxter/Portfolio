@@ -12,7 +12,7 @@ export class NavbarMobileComponent implements OnInit {
   ngOnInit(): void {
     /* Active link on Navbar */
     $(document).on('click', '.nav-link', function() {
-        console.log($('nav-item'));
+        // console.log($('nav-item'));
         $('.nav-item').removeClass('active');
         $(this).parent().addClass('active');
     });
