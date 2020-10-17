@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "portfolio": "portfolio-99bd5",
+    "default": "portfolio-99bd5"
+  },
+  "targets": {
+    "portfolio-99bd5": {
+      "hosting": {
+        "Portfolio": [
+          "portfolio-99bd5"
+        ]
+      }
+    }
+  }
+}

@@ -11,4 +11,17 @@ ng build --prod --output-path docs --base-href &#x2f;Portfolio/
 ## Update Angular
 ng update --all --force
 
+## Firebase
 
+### install
+npm install -g firebase-tools
+
+### login
+firebase login
+firebase init
+
+### deploy
+firebase deploy
+
+### launch 
+firebase open
