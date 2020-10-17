@@ -2,6 +2,7 @@ import { Component, OnInit, ɵConsole } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { ProjectPageService } from './project-page.service';
+import {DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project-page',
@@ -16,14 +17,19 @@ export class ProjectPageComponent implements OnInit {
   constructor(
     private service: ProjectPageService,
     private titleService: Title,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer
   ) {}
-
+  public transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.service.getProject(params.get('id')).subscribe(c => {
         this.project = c;
+        this.project.video += '?autoplay=1&mute=0';
+
       });
     });
 
@@ -33,4 +39,6 @@ export class ProjectPageComponent implements OnInit {
   public setTitle( newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
+
+
 }
