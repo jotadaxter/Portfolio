@@ -11,3 +11,18 @@ $linkedin-color: #0077b5;
 .linkedin-icon {
   color: $linkedin-color;
 }
+
+.page-title {
+  text-align: center;
+  margin: 1.2em;
+  font-size: 3em;
+}
+
+.custom-ul {
+  display: flex;
+}
+
+.custom-li {
+  list-style-type: none;
+  margin:0.4em;
+}

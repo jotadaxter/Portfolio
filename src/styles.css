@@ -10,4 +10,7 @@
 .linkedin-icon {
   color: #0077b5;
 }
-/*# sourceMappingURL=styles.css.map */
+.page-title {
+  text-align: center;
+  color: blue;
+}

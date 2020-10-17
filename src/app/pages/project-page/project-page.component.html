@@ -1,8 +1,6 @@
-
-
 <div *ngIf="project">
 
-  <h1>{{ project.title }}</h1>
+  <h1 class="page-title">{{ project.title }}</h1>
 
   <div id="carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -25,28 +23,39 @@
           <span class="sr-only">Next</span>
         </a>
     </div>
-
   </div>
 
+  <br>
+  <h2>Description</h2>
   <p>{{ project.description }}</p>
-  <app-image-modal></app-image-modal>
-  lightbox gallery
-  <ul>
-    <li>Course: {{project.courseShort + ' - ' + project.course}}</li>
-    <li>Languages:
-      <ul>
-        <li *ngFor="let lang of project.languages"> {{lang}}</li>
-      </ul>
+
+  <h2>Course</h2> <p>{{project.courseShort + ' - ' + project.course}}</p>
+
+  <h2>Languages</h2>
+  <ul class="custom-ul row">
+    <li class="custom-li" *ngFor="let lang of project.languages">
+        <button type="button" class="btn btn-outline-primary">{{lang.name}}</button>
     </li>
-    <li>Tools:
-      <ul>
-        <li *ngFor="let tool of project.tools"> {{tool}}</li>
-      </ul>
-    </li>
-    <li>Area: {{project.area}}</li>
-    <li><a href="{{project.source}}">Source code</a></li>
-    <li><a href="{{project.download}}">Download</a></li>
   </ul>
+
+  <h2>Tools</h2>
+  <ul class="custom-ul">
+    <li class="custom-li" *ngFor="let tool of project.tools">
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-primary">{{tool.name}}</button>
+      </div>
+    </li>
+  </ul>
+
+  <h2>Area</h2> <p>{{project.area}}</p>
+
+  <h2>Files</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><a href="{{project.source}}">Source code</a></li>
+    <li class="list-group-item"><a href="{{project.download}}">Download</a></li>
+  </ul>
+  <br>
 </div>
 
 
+  <!--<app-image-modal></app-image-modal>-->
