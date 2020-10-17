@@ -34,26 +34,42 @@
   <h2>Languages</h2>
   <ul class="custom-ul row">
     <li class="custom-li" *ngFor="let lang of project.languages">
+      <a href="{{lang.link}}">
         <button type="button" class="btn btn-outline-primary">{{lang.name}}</button>
+      </a>
     </li>
   </ul>
 
   <h2>Tools</h2>
-  <ul class="custom-ul">
+  <ul class="custom-ul row">
     <li class="custom-li" *ngFor="let tool of project.tools">
-      <div class="btn-group">
+      <a href="{{tool.link}}">
         <button type="button" class="btn btn-outline-primary">{{tool.name}}</button>
-      </div>
+      </a>
     </li>
   </ul>
 
   <h2>Area</h2> <p>{{project.area}}</p>
 
-  <h2>Files</h2>
-  <ul class="list-group">
-    <li class="list-group-item"><a href="{{project.source}}">Source code</a></li>
-    <li class="list-group-item"><a href="{{project.download}}">Download</a></li>
+  <h2>Downloads</h2>
+  <ul class="custom-ul row">
+    <li class="custom-li">
+      <a href="{{project.source}}">
+        <button type="button" class="btn btn-outline-primary">Source code</button>
+      </a>
+    </li>
+    <li class="custom-li">
+      <a href="{{project.download}}">
+        <button type="button" class="btn btn-outline-primary">Game</button>
+      </a>
+    </li>
   </ul>
+
+  <br>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="{{project.video}}" allowfullscreen></iframe>
+  </div>
+
   <br>
 </div>
 
