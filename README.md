@@ -21,6 +21,7 @@ firebase login
 firebase init
 
 ### deploy
+ng build --prod
 firebase deploy
 
 ### launch 
