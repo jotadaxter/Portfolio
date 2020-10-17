@@ -7,12 +7,13 @@ import { ProjectPageComponent } from './pages/project-page/project-page.componen
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'about', pathMatch: 'full' },
+  {path: '', component: AboutPageComponent},
   {path: 'about', component: AboutPageComponent},
   {path: 'projects', component: ProjectsPageComponent},
   {path: 'project/:id', component: ProjectPageComponent},
   {path: 'contact', component: ContactPageComponent},
-  {path: 'contacts', component: ContactPageComponent}
+  {path: 'contacts', component: ContactPageComponent},
+  {path: '**', component: AboutPageComponent},
 ];
 
 @NgModule({
