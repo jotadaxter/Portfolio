@@ -22,4 +22,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [AboutPageComponent, ProjectsPageComponent, ContactPageComponent]
+export const routingComponents = [AboutPageComponent, ProjectsPageComponent, ContactPageComponent];
