@@ -1,1 +1,45 @@
 <h3>About Me</h3><br>
+
+
+<div class="row">
+  <div class="col-md-4" style="border-color:green; border-style: solid;">
+    <img id="img-about" src="https://i.imgur.com/CSH1RDO.png" class="img-responsive rounded-circle"alt="João Santos">
+
+  <div class="row" style="border-color:blueviolet; border-style: solid; padding:0.5em;">
+
+  </div>
+  <div class="row" style="border-color:rgb(0, 128, 122); border-style: solid;">
+    <h3>Skills</h3>
+
+    <h6>Programming Languages</h6>
+    <ul class="custom-ul row">
+      <li class="custom-li" *ngFor="let lang of project.programming_languages">
+        <a href="{{lang.link}}">
+          <button type="button" class="btn btn-outline-primary">{{lang.name}}</button>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+
+  </div>
+
+  <div class="col-md-8" style="padding:blue; border-style: solid;">
+    Hi,
+
+    <p>My name is João Alexandre Carvalho Marinho dos Santos and I'm 23 years old.</p>
+
+    <p>I'm currently finishing my Master's degree in Informatics and Computing Engineering in FEUP, on the 5th year of studies.</p>
+
+    <p>In the past year I've been to Rzeszow, in Poland, on Erasmus+ programme where I stayed for a whole semester at UITM (University of Information Technology and Management) with a global grade of 18,75.</p>
+
+    <p>Since my early ages, I developed a big interest in videogames, and that lead me to this course. Alongside my academic studies, I had the chance to learn many game engines such as Unity, Unreal Engine, libGDX that I have used to create many schoolar projects.</p>
+  </div>
+
+
+</div>
+
+<div class="row" style="border-color:red; border-style: solid;">
+  text
+</div>

@@ -1,5 +1,8 @@
 # Portfolio
 
+## update packages
+npm update
+
 ## Compile and Run
 ng serve --open
 
