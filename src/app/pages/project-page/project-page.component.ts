@@ -1,8 +1,8 @@
-import { Component, OnInit, ɵConsole } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { ProjectPageService } from './project-page.service';
-import {DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-project-page',
