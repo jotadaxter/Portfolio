@@ -8,21 +8,13 @@
 }
 
 .about-ul {
-  border-color:chocolate;
-  border-style: solid;
   margin:auto;
   padding:0.2em;
-
 }
 
 .about-li {
-  border-color:rgb(189, 30, 210);
-  border-style: solid;
-
-
   list-style-type: none;
   margin:0.4em;
-
 }
 
 .sp-paragraph {
@@ -75,6 +67,15 @@ ul.timeline > li:before {
 
 .small-list {
   list-style-type: none;
+}
+
+.exp-loc{
+  padding-right:2em;
+  float:right
+}
+
+.color-with-marker ::marker {
+  color:#0275d8;
 }
 
 
