@@ -10,7 +10,8 @@ import { AboutPageService } from './about-page.service';
 })
 export class AboutPageComponent implements OnInit {
   skills: any;
-  serviceUrl = 'https://my-json-server.typicode.com/jotadaxter/PortfolioDB/skills/';
+  education: any;
+  experience: any;
 
   constructor(
     private service: AboutPageService,
@@ -22,6 +23,12 @@ export class AboutPageComponent implements OnInit {
     this.route.paramMap.subscribe(() => {
       this.service.getSkills().subscribe(c => {
         this.skills = c;
+      });
+      this.service.getEducation().subscribe(c => {
+        this.education = c;
+      });
+      this.service.getExperience().subscribe(c => {
+        this.experience = c;
       });
     });
 

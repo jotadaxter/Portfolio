@@ -1,4 +1,4 @@
-<h3>About Me</h3><br>
+<h3 style="padding-left:1em">About Me</h3>
 
 <!-- Content Pannel -->
 <div class="row" style="border-color:yellow; border-style: solid;">
@@ -8,12 +8,12 @@
 
     <div class="row" style="border-color:blueviolet; border-style: solid; padding:0.5em;"></div>
 
-    <div class="row" style="border-color:rgb(0, 128, 122); border-style: solid;">
-      <h3>Skills</h3>
+    <div class="row" *ngIf="skills" style="border-color:rgb(0, 128, 122); border-style: solid;">
+      <h3 style="padding-left:1em">Skills</h3>
 
       <!-- Programming Languages Block -->
-      <div>
-        <h6>Programming Languages</h6>
+      <div *ngIf="skills.programming_languages">
+        <h6 style="padding-left:1.5em">Programming Languages</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.programming_languages">
             <a href="{{lang.link}}">
@@ -25,7 +25,7 @@
 
       <!-- Frameworks Block -->
       <div>
-        <h6>Frameworks</h6>
+        <h6 style="padding-left:1.5em">Frameworks</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.frameworks">
             <a href="{{lang.link}}">
@@ -37,7 +37,7 @@
 
       <!-- Databases Block -->
       <div>
-        <h6>Databases</h6>
+        <h6 style="padding-left:1.5em">Databases</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.databases">
             <a href="{{lang.link}}">
@@ -49,7 +49,7 @@
 
       <!-- Tools Block -->
       <div>
-        <h6>Tools</h6>
+        <h6 style="padding-left:1.5em">Tools</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.tools">
             <a href="{{lang.link}}">
@@ -61,7 +61,7 @@
 
       <!-- OS Block -->
       <div>
-        <h6>Operative Systems</h6>
+        <h6 style="padding-left:1.5em">Operative Systems</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.os">
             <a href="{{lang.link}}">
@@ -73,7 +73,7 @@
 
       <!-- Languages Block -->
       <div>
-        <h6>Languages</h6>
+        <h6 style="padding-left:1.5em">Languages</h6>
         <ul class="row about-ul">
           <li class="about-li" *ngFor="let lang of skills.languages">
             <a href="{{lang.link}}">
@@ -118,74 +118,71 @@
   </div>
 
   <!-- Education -->
-  <div class="row" style="border-color:red; border-style: solid; margin:auto; padding:1.5em">
-    <div class="row" style="margin:auto">
-      <h4>Education</h4>
-      <ul class="timeline">
-        <li>
-          <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
-          <a href="#" class="float-right">21 March, 2014</a>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et
-            elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
-        </li>
-        <li>
-          <a href="#">21 000 Job Seekers</a>
-          <a href="#" class="float-right">4 March, 2014</a>
-          <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo
-            accumsan, sed semper nisi sollicitudin...</p>
-        </li>
-        <li>
-          <a href="#">Awesome Employers</a>
-          <a href="#" class="float-right">1 April, 2014</a>
-          <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis
-            pharetra velit. Sed nec tempor nibh...</p>
-        </li>
-      </ul>
+
+  <div class="row" style="border-color:red; border-style: solid; margin:auto;">
+    <div class="container" style="border-color:rgb(0, 255, 64); border-style: solid; margin-top: 0;">
+      <div class="row" style="margin:auto" style="border-color:rgb(134, 211, 153); border-style: solid; padding:1em">
+        <h4 class="education">Education</h4>
+        <ul class="timeline">
+          <!-- Large and medium screens -->
+          <li *ngFor="let elem of education" class="d-none d-md-block">
+            <span>{{elem.date}}</span>
+            <span class="edu-loc" > {{elem.location}}</span>
+            <span class="edu-title" style="padding-left:1.5em; color:rgb(99, 98, 98)"><b>{{elem.title}}</b></span>
+            <p>{{elem.description}}</p>
+          </li>
+
+          <!-- Small screens -->
+          <li *ngFor="let elem of education" class="d-md-none">
+            <ul style="padding:0">
+              <li class="small-list">{{elem.date}}</li>
+              <li class="small-list" style="color:rgb(99, 98, 98);"><b>{{elem.title}}</b></li>
+              <li class="small-list">{{elem.description}}</li>
+              <li class="small-list">{{elem.location}}</li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
     </div>
 
-  </div>
-
-  <!-- Experience -->
-  <div class="row" style="border-color:red; border-style: solid; margin:auto">
-    <div class="container mt-5 mb-5">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <h4>Education</h4>
+    <!-- Experience -->
+    <div class="row" style="border-color:red; border-style: solid; margin:auto;">
+      <div class="container" style="border-color:rgb(0, 255, 64); border-style: solid; margin-top: 0;">
+        <div class="row" style="margin:auto" style="border-color:rgb(134, 211, 153); border-style: solid; padding:1em">
+          <h4 class="education">Education</h4>
           <ul class="timeline">
-            <li>
-              <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
-              <a href="#" class="float-right">21 March, 2014</a>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et
-                elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....
-              </p>
+            <!-- Large and medium screens -->
+            <li *ngFor="let elem of education" class="d-none d-md-block">
+              <span>{{elem.date}}</span>
+              <span class="edu-loc" > {{elem.location}}</span>
+              <span class="edu-title" style="padding-left:1.5em; color:rgb(99, 98, 98)"><b>{{elem.title}}</b></span>
+              <p>{{elem.description}}</p>
             </li>
-            <li>
-              <a href="#">21 000 Job Seekers</a>
-              <a href="#" class="float-right">4 March, 2014</a>
-              <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo
-                accumsan, sed semper nisi sollicitudin...</p>
+
+            <!-- Small screens -->
+            <li *ngFor="let elem of education" class="d-md-none">
+              <ul style="padding:0">
+                <li class="small-list">{{elem.date}}</li>
+                <li class="small-list" style="color:rgb(99, 98, 98);"><b>{{elem.title}}</b></li>
+                <li class="small-list">{{elem.description}}</li>
+                <li class="small-list">{{elem.location}}</li>
+              </ul>
             </li>
-            <li>
-              <a href="#">Awesome Employers</a>
-              <a href="#" class="float-right">1 April, 2014</a>
-              <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae,
-                mollis pharetra velit. Sed nec tempor nibh...</p>
-            </li>
+
           </ul>
         </div>
       </div>
+
+    <!-- GDPR (General Data Protection Regulation) -->
+    <div class="row" style="border-color:rgb(0, 255, 34); border-style: solid; margin:auto; padding:1.5em">
+      <h4>GDPR (General Data Protection Regulation)</h4>
+      <p>I hereby give consent for my personal data included in the application to be processed
+        for the purposes of the recruitment process in accordance with Art. 6 paragraph
+        1 letter a of the Regulation of the European Parliament and of the Council(EU)
+        2016/679 of 27 April 2016 on the protection of natural persons with regardto the
+        processing of personal data and on the free movement of such data, andrepealing
+        Directive 95/46/EC (General Data Protection Regulation).</p>
     </div>
-  </div>
 
-  <!-- GDPR (General Data Protection Regulation) -->
-  <div class="row" style="border-color:rgb(0, 255, 34); border-style: solid; margin:auto; padding:1.5em">
-    <h4>GDPR (General Data Protection Regulation)</h4>
-    <p>I hereby give consent for my personal data included in the application to be processed
-      for the purposes of the recruitment process in accordance with Art. 6 paragraph
-      1 letter a of the Regulation of the European Parliament and of the Council(EU)
-      2016/679 of 27 April 2016 on the protection of natural persons with regardto the
-      processing of personal data and on the free movement of such data, andrepealing
-      Directive 95/46/EC (General Data Protection Regulation).</p>
   </div>
-
-</div>

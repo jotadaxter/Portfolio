@@ -12,7 +12,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ProjectPageComponent implements OnInit {
   id: string;
   project: any;
-  serviceUrl = 'https://my-json-server.typicode.com/jotadaxter/PortfolioDB/projects/';
 
   constructor(
     private service: ProjectPageService,
