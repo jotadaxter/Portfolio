@@ -48,6 +48,18 @@
         </ul>
       </div>
 
+      <!-- Technologies Block -->
+      <div>
+        <h6>Technologies</h6>
+        <ul class="row about-ul">
+          <li class="about-li" *ngFor="let elem of skills.technologies">
+            <a href="{{elem.link}}">
+              <button type="button" class="btn btn-outline-primary p-lang">{{elem.name}}</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <!-- Tools Block -->
       <div>
         <h6>Tools</h6>
@@ -96,25 +108,24 @@
   <div class="col-md-8">
     <p>Hi,</p>
     <p>My name is João Alexandre Carvalho Marinho dos Santos and I'm 23 years old.</p>
-    <p>I'm currently finishing my Master's degree in Informatics and Computing Engineering in FEUP, on the 5th year of
-      studies.</p>
-    <p>In the past year I've been to Rzeszow, in Poland, on Erasmus+ programme where I stayed for a whole semester at
-      UITM (University of Information Technology and Management) with a global grade of 18,75.</p>
-    <p>Since my early ages, I developed a big interest in videogames, and that lead me to this course. Alongside my
-      academic studies, I had the chance to learn many game engines such as Unity, Unreal Engine, libGDX that I have
-      used to create many schoolar projects.</p>
+    <p>I'm currently finishing my Master's degree in Informatics and Computing Engineering in FEUP, in the 5th year of my studies.</p>
+    <p>In the past year, I have been to Rzeszow, in Poland, on the Erasmus+ program, where I stayed for a whole semester
+      at UITM (University of Information Technology and Management) with a global grade of 18,75.</p>
+    <p>I was led to this course due to my considerable interest in video games, which I developed at an early age.
+      Alongside my academic studies, I had the chance to learn many game engines such as Unity, Unreal Engine,
+      libGDX that I have used to create many scholarly projects.</p>
     <span>My areas of interest are:</span>
     <ul class="color-with-marker">
       <li>Game Development</li>
       <li>Augmented/Virtual Reality</li>
-      <li>Web and App Development, more related to Back-End</li>
+      <li>Web and App Development, more related to Backend</li>
       <li>Software Development and System Design</li>
       <li>Database Administration</li>
       <li>Big Data</li>
-    </ul>    <p>Besides having these preferences, I am open to other topics as well.</p>
-    <p>I'm interested and keen to learn new things and flexible in terms of working in almost any type of topic.</p>
-    <p>I'm a good team worker, very organized, hardworker, optimist, responsable and I can easily adaptat to any work
-      environment.</p>
+    </ul>
+    <p>Besides having these preferences, I am open to other topics as well.</p>
+    <p>I'm interested and keen to learn new things and flexible in working on almost any type of topic.</p>
+    <p>I'm a good team worker, very organized, hard worker, optimist, responsible, and I can quickly adapt to any work environment.</p>
   </div>
 
   <!-- Education -->
@@ -181,7 +192,7 @@
       <h3 style="padding:0.5em">GDPR (General Data Protection Regulation)</h3>
       <p>I hereby give consent for my personal data included in the application to be processed
         for the purposes of the recruitment process in accordance with Art. 6 paragraph
-        1 letter a of the Regulation of the European Parliament and of the Council(EU)
+        1 letter <i>a</i> of the Regulation of the European Parliament and of the Council(EU)
         2016/679 of 27 April 2016 on the protection of natural persons with regardto the
         processing of personal data and on the free movement of such data, andrepealing
         Directive 95/46/EC (General Data Protection Regulation).</p>
